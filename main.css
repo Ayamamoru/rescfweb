@@ -3,7 +3,15 @@ html { scroll-behavior: smooth; }
 
 body {
     font-family: 'Rubik', system-ui, -apple-system, sans-serif;
-    background: linear-gradient(180deg, #0b2545 0%, #1e3a8a 52%, #ff7a59 100%);
+    background: linear-gradient(
+    #0d1b4b 0%  25.7%,
+    #1a2060 25.7% 46.3%,
+    #2d2060 46.3% 62.9%,
+    #6b2d50 62.9% 75.4%,
+    #9e3040 75.4% 84.6%,
+    #e05c2a 84.6% 93.1%,
+    #ff8c55 93.1% 100%  
+    );
     background-attachment: fixed;
     color: #fff;
     padding: 3rem 1.5rem 5rem;
@@ -40,7 +48,7 @@ header p {
 section {
     background: rgba(255,255,255,0.07);
     border: 1px solid rgba(255,255,255,0.13);
-    border-radius: 12px;
+    border-radius: 3px;
     padding: 1.5rem 1.75rem;
 }
 
@@ -109,7 +117,7 @@ li {
     padding: 0.45rem 1rem;
     background: transparent;
     border: 1px solid rgba(255,255,255,0.5);
-    border-radius: 6px;
+    border-radius: 3px;
     color: rgba(255,255,255,0.92);
     font-size: 0.9rem;
     text-decoration: none;
@@ -128,7 +136,7 @@ button {
     background: transparent;
     color: #fff;
     border: 2px solid rgba(255,255,255,0.7);
-    border-radius: 8px;
+    border-radius: 2px;
     padding: 0.55rem 1.4rem;
     font-family: inherit;
     font-size: 0.97rem;

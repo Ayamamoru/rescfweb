@@ -47,7 +47,7 @@ prevBtn.addEventListener("click", function () {
 
 muteBtn.addEventListener("click", function () {
     audio.muted = !audio.muted;
-    muteBtn.textContent = audio.muted ? "🔇" : "🔊";
+    muteBtn.textContent = audio.muted ? "on" : "off";
 });
 
 audio.addEventListener("ended", function () {
