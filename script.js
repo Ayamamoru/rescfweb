@@ -1,3 +1,61 @@
+const tracks = [
+    { src: "thefeels.mp3",   name: "The Feels",  artist: "Twice" },
+    { src: "whatislove.mp3", name: "What Is Love", artist: "Twice" },
+    { src: "Cicada.mp3",     name: "Cicada",     artist: "Good Kid" },
+    { src: "01_BUBBLY.mp3",  name: "Bubbly",     artist: "Good Kid" },
+    { src: "03_SUMMER.mp3",  name: "Summer",     artist: "Good Kid" },
+];
+
+let trackIndex = 0;
+
+const audio      = document.getElementById("audio-player");
+const trackName  = document.getElementById("track-name");
+const trackArtist = document.getElementById("track-artist");
+const playBtn    = document.getElementById("play-btn");
+const prevBtn    = document.getElementById("prev-btn");
+const nextBtn    = document.getElementById("next-btn");
+const muteBtn    = document.getElementById("mute-btn");
+
+function loadTrack(index) {
+    const t = tracks[index];
+    audio.src = t.src;
+    trackName.textContent = t.name;
+    trackArtist.textContent = t.artist;
+    audio.play();
+    playBtn.textContent = "⏸";
+}
+
+playBtn.addEventListener("click", function () {
+    if (audio.paused) {
+        audio.play();
+        playBtn.textContent = "⏸";
+    } else {
+        audio.pause();
+        playBtn.textContent = "▶️";
+    }
+});
+
+nextBtn.addEventListener("click", function () {
+    trackIndex = (trackIndex + 1) % tracks.length;
+    loadTrack(trackIndex);
+});
+
+prevBtn.addEventListener("click", function () {
+    trackIndex = (trackIndex - 1 + tracks.length) % tracks.length;
+    loadTrack(trackIndex);
+});
+
+muteBtn.addEventListener("click", function () {
+    audio.muted = !audio.muted;
+    muteBtn.textContent = audio.muted ? "🔇" : "🔊";
+});
+
+audio.addEventListener("ended", function () {
+    trackIndex = (trackIndex + 1) % tracks.length;
+    loadTrack(trackIndex);
+});
+
+
 let count = 0;
 
 const button = document.getElementById("log-btn");

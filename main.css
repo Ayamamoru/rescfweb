@@ -224,3 +224,42 @@ footer a { color: #ffd7c1; text-decoration: underline; }
     transition: opacity 0.5s ease;
     pointer-events: none;
 }
+
+#music-player {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.9rem 1.75rem;
+    flex-wrap: wrap;
+}
+
+#track-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+}
+
+#track-name {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: #fff;
+}
+
+#track-artist {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.6);
+}
+
+#player-controls {
+    display: flex;
+    gap: 0.4rem;
+}
+
+#player-controls button {
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 6px;
+    padding: 0.3rem 0.6rem;
+    font-size: 1rem;
+    margin: 0;
+}
